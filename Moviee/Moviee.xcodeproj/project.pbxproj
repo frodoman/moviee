@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A74856B20AB6A1300AFB5E6 /* URLTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74856A20AB6A1300AFB5E6 /* URLTest.swift */; };
+		9A74856C20AB6AA000AFB5E6 /* MVConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A341720AB2B00000F3CFD /* MVConsts.swift */; };
+		9A74856E20AB6E5400AFB5E6 /* MVURLMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74856D20AB6E5400AFB5E6 /* MVURLMaker.swift */; };
+		9A74856F20AB6E7400AFB5E6 /* MVURLMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74856D20AB6E5400AFB5E6 /* MVURLMaker.swift */; };
+		9A74857220AB6EF200AFB5E6 /* MVNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857120AB6EF200AFB5E6 /* MVNetworkManager.swift */; };
+		9A74857420AB6F5500AFB5E6 /* MVMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857320AB6F5500AFB5E6 /* MVMovie.swift */; };
+		9A74857620AB6F6A00AFB5E6 /* MVCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857520AB6F6A00AFB5E6 /* MVCollection.swift */; };
+		9A74857820AB6FE800AFB5E6 /* MVMovie+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857720AB6FE800AFB5E6 /* MVMovie+ViewModel.swift */; };
+		9A74857A20AB6FFF00AFB5E6 /* MVCollection+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857920AB6FFF00AFB5E6 /* MVCollection+ViewModel.swift */; };
 		D68A33E020AB1BE5000F3CFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A33DF20AB1BE5000F3CFD /* AppDelegate.swift */; };
-		D68A33E220AB1BE5000F3CFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A33E120AB1BE5000F3CFD /* ViewController.swift */; };
+		D68A33E220AB1BE5000F3CFD /* MVMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A33E120AB1BE5000F3CFD /* MVMainViewController.swift */; };
 		D68A33E520AB1BE5000F3CFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68A33E320AB1BE5000F3CFD /* Main.storyboard */; };
 		D68A33E820AB1BE5000F3CFD /* Moviee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D68A33E620AB1BE5000F3CFD /* Moviee.xcdatamodeld */; };
 		D68A33EA20AB1BE5000F3CFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68A33E920AB1BE5000F3CFD /* Assets.xcassets */; };
 		D68A33ED20AB1BE5000F3CFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68A33EB20AB1BE5000F3CFD /* LaunchScreen.storyboard */; };
 		D68A33F820AB1BE5000F3CFD /* MovieeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A33F720AB1BE5000F3CFD /* MovieeTests.swift */; };
 		D68A340320AB1BE5000F3CFD /* MovieeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A340220AB1BE5000F3CFD /* MovieeUITests.swift */; };
-		D68A341820AB2B00000F3CFD /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A341720AB2B00000F3CFD /* Consts.swift */; };
+		D68A341820AB2B00000F3CFD /* MVConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A341720AB2B00000F3CFD /* MVConsts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +45,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A74856A20AB6A1300AFB5E6 /* URLTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTest.swift; sourceTree = "<group>"; };
+		9A74856D20AB6E5400AFB5E6 /* MVURLMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVURLMaker.swift; sourceTree = "<group>"; };
+		9A74857120AB6EF200AFB5E6 /* MVNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVNetworkManager.swift; sourceTree = "<group>"; };
+		9A74857320AB6F5500AFB5E6 /* MVMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVMovie.swift; sourceTree = "<group>"; };
+		9A74857520AB6F6A00AFB5E6 /* MVCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCollection.swift; sourceTree = "<group>"; };
+		9A74857720AB6FE800AFB5E6 /* MVMovie+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MVMovie+ViewModel.swift"; sourceTree = "<group>"; };
+		9A74857920AB6FFF00AFB5E6 /* MVCollection+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MVCollection+ViewModel.swift"; sourceTree = "<group>"; };
 		D68A33DC20AB1BE5000F3CFD /* Moviee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moviee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68A33DF20AB1BE5000F3CFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D68A33E120AB1BE5000F3CFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D68A33E120AB1BE5000F3CFD /* MVMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVMainViewController.swift; sourceTree = "<group>"; };
 		D68A33E420AB1BE5000F3CFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D68A33E720AB1BE5000F3CFD /* Moviee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Moviee.xcdatamodel; sourceTree = "<group>"; };
 		D68A33E920AB1BE5000F3CFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +66,7 @@
 		D68A33FE20AB1BE5000F3CFD /* MovieeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68A340220AB1BE5000F3CFD /* MovieeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieeUITests.swift; sourceTree = "<group>"; };
 		D68A340420AB1BE5000F3CFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D68A341720AB2B00000F3CFD /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		D68A341720AB2B00000F3CFD /* MVConsts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVConsts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +94,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A74857020AB6ECC00AFB5E6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9A74857120AB6EF200AFB5E6 /* MVNetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		D68A33D320AB1BE5000F3CFD = {
 			isa = PBXGroup;
 			children = (
+				D68A341520AB1E76000F3CFD /* Support */,
 				D68A33DE20AB1BE5000F3CFD /* SourceCodes */,
 				D68A33F620AB1BE5000F3CFD /* MovieeTests */,
 				D68A340120AB1BE5000F3CFD /* MovieeUITests */,
@@ -102,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				D68A341620AB1EB4000F3CFD /* AppDelegate */,
-				D68A341520AB1E76000F3CFD /* Support */,
 				D68A341420AB1E50000F3CFD /* Presenters */,
 				D68A341320AB1E48000F3CFD /* ViewModels */,
 				D68A341220AB1DE1000F3CFD /* ViewControllers */,
@@ -117,6 +141,7 @@
 			children = (
 				D68A33F720AB1BE5000F3CFD /* MovieeTests.swift */,
 				D68A33F920AB1BE5000F3CFD /* Info.plist */,
+				9A74856A20AB6A1300AFB5E6 /* URLTest.swift */,
 			);
 			path = MovieeTests;
 			sourceTree = "<group>";
@@ -134,7 +159,11 @@
 			isa = PBXGroup;
 			children = (
 				D68A33E620AB1BE5000F3CFD /* Moviee.xcdatamodeld */,
-				D68A341720AB2B00000F3CFD /* Consts.swift */,
+				D68A341720AB2B00000F3CFD /* MVConsts.swift */,
+				9A74856D20AB6E5400AFB5E6 /* MVURLMaker.swift */,
+				9A74857320AB6F5500AFB5E6 /* MVMovie.swift */,
+				9A74857520AB6F6A00AFB5E6 /* MVCollection.swift */,
+				9A74857020AB6ECC00AFB5E6 /* Networking */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,7 +179,7 @@
 		D68A341220AB1DE1000F3CFD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D68A33E120AB1BE5000F3CFD /* ViewController.swift */,
+				D68A33E120AB1BE5000F3CFD /* MVMainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -158,6 +187,8 @@
 		D68A341320AB1E48000F3CFD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9A74857720AB6FE800AFB5E6 /* MVMovie+ViewModel.swift */,
+				9A74857920AB6FFF00AFB5E6 /* MVCollection+ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -321,9 +352,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A74857420AB6F5500AFB5E6 /* MVMovie.swift in Sources */,
+				9A74857820AB6FE800AFB5E6 /* MVMovie+ViewModel.swift in Sources */,
+				9A74856E20AB6E5400AFB5E6 /* MVURLMaker.swift in Sources */,
+				9A74857A20AB6FFF00AFB5E6 /* MVCollection+ViewModel.swift in Sources */,
 				D68A33E820AB1BE5000F3CFD /* Moviee.xcdatamodeld in Sources */,
-				D68A341820AB2B00000F3CFD /* Consts.swift in Sources */,
-				D68A33E220AB1BE5000F3CFD /* ViewController.swift in Sources */,
+				D68A341820AB2B00000F3CFD /* MVConsts.swift in Sources */,
+				9A74857620AB6F6A00AFB5E6 /* MVCollection.swift in Sources */,
+				D68A33E220AB1BE5000F3CFD /* MVMainViewController.swift in Sources */,
+				9A74857220AB6EF200AFB5E6 /* MVNetworkManager.swift in Sources */,
 				D68A33E020AB1BE5000F3CFD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,7 +369,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A74856F20AB6E7400AFB5E6 /* MVURLMaker.swift in Sources */,
 				D68A33F820AB1BE5000F3CFD /* MovieeTests.swift in Sources */,
+				9A74856C20AB6AA000AFB5E6 /* MVConsts.swift in Sources */,
+				9A74856B20AB6A1300AFB5E6 /* URLTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +532,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJBSMAW62U;
-				INFOPLIST_FILE = Moviee/Info.plist;
+				INFOPLIST_FILE = Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmartsoft.Moviee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,7 +547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJBSMAW62U;
-				INFOPLIST_FILE = Moviee/Info.plist;
+				INFOPLIST_FILE = Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmartsoft.Moviee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
