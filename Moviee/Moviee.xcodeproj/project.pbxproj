@@ -16,6 +16,8 @@
 		9A74857620AB6F6A00AFB5E6 /* MVCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857520AB6F6A00AFB5E6 /* MVCollection.swift */; };
 		9A74857820AB6FE800AFB5E6 /* MVMovie+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857720AB6FE800AFB5E6 /* MVMovie+ViewModel.swift */; };
 		9A74857A20AB6FFF00AFB5E6 /* MVCollection+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857920AB6FFF00AFB5E6 /* MVCollection+ViewModel.swift */; };
+		9A74857C20AB71A400AFB5E6 /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857B20AB71A400AFB5E6 /* NetworkManagerTest.swift */; };
+		9A74857E20AB721D00AFB5E6 /* MockNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857D20AB721D00AFB5E6 /* MockNetworking.swift */; };
 		D68A33E020AB1BE5000F3CFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A33DF20AB1BE5000F3CFD /* AppDelegate.swift */; };
 		D68A33E220AB1BE5000F3CFD /* MVMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A33E120AB1BE5000F3CFD /* MVMainViewController.swift */; };
 		D68A33E520AB1BE5000F3CFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68A33E320AB1BE5000F3CFD /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 		9A74857520AB6F6A00AFB5E6 /* MVCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCollection.swift; sourceTree = "<group>"; };
 		9A74857720AB6FE800AFB5E6 /* MVMovie+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MVMovie+ViewModel.swift"; sourceTree = "<group>"; };
 		9A74857920AB6FFF00AFB5E6 /* MVCollection+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MVCollection+ViewModel.swift"; sourceTree = "<group>"; };
+		9A74857B20AB71A400AFB5E6 /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
+		9A74857D20AB721D00AFB5E6 /* MockNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworking.swift; sourceTree = "<group>"; };
 		D68A33DC20AB1BE5000F3CFD /* Moviee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moviee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68A33DF20AB1BE5000F3CFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D68A33E120AB1BE5000F3CFD /* MVMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVMainViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		D68A33DE20AB1BE5000F3CFD /* SourceCodes */ = {
 			isa = PBXGroup;
 			children = (
+				9A74857020AB6ECC00AFB5E6 /* Networking */,
 				D68A341620AB1EB4000F3CFD /* AppDelegate */,
 				D68A341420AB1E50000F3CFD /* Presenters */,
 				D68A341320AB1E48000F3CFD /* ViewModels */,
@@ -142,6 +147,8 @@
 				D68A33F720AB1BE5000F3CFD /* MovieeTests.swift */,
 				D68A33F920AB1BE5000F3CFD /* Info.plist */,
 				9A74856A20AB6A1300AFB5E6 /* URLTest.swift */,
+				9A74857B20AB71A400AFB5E6 /* NetworkManagerTest.swift */,
+				9A74857D20AB721D00AFB5E6 /* MockNetworking.swift */,
 			);
 			path = MovieeTests;
 			sourceTree = "<group>";
@@ -163,7 +170,6 @@
 				9A74856D20AB6E5400AFB5E6 /* MVURLMaker.swift */,
 				9A74857320AB6F5500AFB5E6 /* MVMovie.swift */,
 				9A74857520AB6F6A00AFB5E6 /* MVCollection.swift */,
-				9A74857020AB6ECC00AFB5E6 /* Networking */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -372,6 +378,8 @@
 				9A74856F20AB6E7400AFB5E6 /* MVURLMaker.swift in Sources */,
 				D68A33F820AB1BE5000F3CFD /* MovieeTests.swift in Sources */,
 				9A74856C20AB6AA000AFB5E6 /* MVConsts.swift in Sources */,
+				9A74857E20AB721D00AFB5E6 /* MockNetworking.swift in Sources */,
+				9A74857C20AB71A400AFB5E6 /* NetworkManagerTest.swift in Sources */,
 				9A74856B20AB6A1300AFB5E6 /* URLTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
