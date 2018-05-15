@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D68A33E020AB1BE5000F3CFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A33DF20AB1BE5000F3CFD /* AppDelegate.swift */; };
+		D68A33E220AB1BE5000F3CFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A33E120AB1BE5000F3CFD /* ViewController.swift */; };
+		D68A33E520AB1BE5000F3CFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68A33E320AB1BE5000F3CFD /* Main.storyboard */; };
+		D68A33E820AB1BE5000F3CFD /* Moviee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D68A33E620AB1BE5000F3CFD /* Moviee.xcdatamodeld */; };
+		D68A33EA20AB1BE5000F3CFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D68A33E920AB1BE5000F3CFD /* Assets.xcassets */; };
+		D68A33ED20AB1BE5000F3CFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68A33EB20AB1BE5000F3CFD /* LaunchScreen.storyboard */; };
+		D68A33F820AB1BE5000F3CFD /* MovieeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A33F720AB1BE5000F3CFD /* MovieeTests.swift */; };
+		D68A340320AB1BE5000F3CFD /* MovieeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A340220AB1BE5000F3CFD /* MovieeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D68A33F420AB1BE5000F3CFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D68A33D420AB1BE5000F3CFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D68A33DB20AB1BE5000F3CFD;
+			remoteInfo = Moviee;
+		};
+		D68A33FF20AB1BE5000F3CFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D68A33D420AB1BE5000F3CFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D68A33DB20AB1BE5000F3CFD;
+			remoteInfo = Moviee;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D68A33DC20AB1BE5000F3CFD /* Moviee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moviee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D68A33DF20AB1BE5000F3CFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D68A33E120AB1BE5000F3CFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D68A33E420AB1BE5000F3CFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D68A33E720AB1BE5000F3CFD /* Moviee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Moviee.xcdatamodel; sourceTree = "<group>"; };
+		D68A33E920AB1BE5000F3CFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D68A33EC20AB1BE5000F3CFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D68A33EE20AB1BE5000F3CFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D68A33F320AB1BE5000F3CFD /* MovieeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D68A33F720AB1BE5000F3CFD /* MovieeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieeTests.swift; sourceTree = "<group>"; };
+		D68A33F920AB1BE5000F3CFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D68A33FE20AB1BE5000F3CFD /* MovieeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D68A340220AB1BE5000F3CFD /* MovieeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieeUITests.swift; sourceTree = "<group>"; };
+		D68A340420AB1BE5000F3CFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D68A33D920AB1BE5000F3CFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68A33F020AB1BE5000F3CFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68A33FB20AB1BE5000F3CFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D68A33D320AB1BE5000F3CFD = {
+			isa = PBXGroup;
+			children = (
+				D68A33DE20AB1BE5000F3CFD /* SourceCodes */,
+				D68A33F620AB1BE5000F3CFD /* MovieeTests */,
+				D68A340120AB1BE5000F3CFD /* MovieeUITests */,
+				D68A33DD20AB1BE5000F3CFD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D68A33DD20AB1BE5000F3CFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D68A33DC20AB1BE5000F3CFD /* Moviee.app */,
+				D68A33F320AB1BE5000F3CFD /* MovieeTests.xctest */,
+				D68A33FE20AB1BE5000F3CFD /* MovieeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D68A33DE20AB1BE5000F3CFD /* SourceCodes */ = {
+			isa = PBXGroup;
+			children = (
+				D68A341620AB1EB4000F3CFD /* AppDelegate */,
+				D68A341520AB1E76000F3CFD /* Support */,
+				D68A341420AB1E50000F3CFD /* Presenters */,
+				D68A341320AB1E48000F3CFD /* ViewModels */,
+				D68A341220AB1DE1000F3CFD /* ViewControllers */,
+				D68A341120AB1DD8000F3CFD /* Views */,
+				D68A341020AB1DD0000F3CFD /* Models */,
+			);
+			path = SourceCodes;
+			sourceTree = "<group>";
+		};
+		D68A33F620AB1BE5000F3CFD /* MovieeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D68A33F720AB1BE5000F3CFD /* MovieeTests.swift */,
+				D68A33F920AB1BE5000F3CFD /* Info.plist */,
+			);
+			path = MovieeTests;
+			sourceTree = "<group>";
+		};
+		D68A340120AB1BE5000F3CFD /* MovieeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D68A340220AB1BE5000F3CFD /* MovieeUITests.swift */,
+				D68A340420AB1BE5000F3CFD /* Info.plist */,
+			);
+			path = MovieeUITests;
+			sourceTree = "<group>";
+		};
+		D68A341020AB1DD0000F3CFD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D68A33E620AB1BE5000F3CFD /* Moviee.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D68A341120AB1DD8000F3CFD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D68A33E320AB1BE5000F3CFD /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D68A341220AB1DE1000F3CFD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D68A33E120AB1BE5000F3CFD /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D68A341320AB1E48000F3CFD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D68A341420AB1E50000F3CFD /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		D68A341520AB1E76000F3CFD /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				D68A33EE20AB1BE5000F3CFD /* Info.plist */,
+				D68A33EB20AB1BE5000F3CFD /* LaunchScreen.storyboard */,
+				D68A33E920AB1BE5000F3CFD /* Assets.xcassets */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		D68A341620AB1EB4000F3CFD /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D68A33DF20AB1BE5000F3CFD /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D68A33DB20AB1BE5000F3CFD /* Moviee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D68A340720AB1BE5000F3CFD /* Build configuration list for PBXNativeTarget "Moviee" */;
+			buildPhases = (
+				D68A33D820AB1BE5000F3CFD /* Sources */,
+				D68A33D920AB1BE5000F3CFD /* Frameworks */,
+				D68A33DA20AB1BE5000F3CFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Moviee;
+			productName = Moviee;
+			productReference = D68A33DC20AB1BE5000F3CFD /* Moviee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D68A33F220AB1BE5000F3CFD /* MovieeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D68A340A20AB1BE5000F3CFD /* Build configuration list for PBXNativeTarget "MovieeTests" */;
+			buildPhases = (
+				D68A33EF20AB1BE5000F3CFD /* Sources */,
+				D68A33F020AB1BE5000F3CFD /* Frameworks */,
+				D68A33F120AB1BE5000F3CFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D68A33F520AB1BE5000F3CFD /* PBXTargetDependency */,
+			);
+			name = MovieeTests;
+			productName = MovieeTests;
+			productReference = D68A33F320AB1BE5000F3CFD /* MovieeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D68A33FD20AB1BE5000F3CFD /* MovieeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D68A340D20AB1BE5000F3CFD /* Build configuration list for PBXNativeTarget "MovieeUITests" */;
+			buildPhases = (
+				D68A33FA20AB1BE5000F3CFD /* Sources */,
+				D68A33FB20AB1BE5000F3CFD /* Frameworks */,
+				D68A33FC20AB1BE5000F3CFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D68A340020AB1BE5000F3CFD /* PBXTargetDependency */,
+			);
+			name = MovieeUITests;
+			productName = MovieeUITests;
+			productReference = D68A33FE20AB1BE5000F3CFD /* MovieeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D68A33D420AB1BE5000F3CFD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Xmart Soft Ltd";
+				TargetAttributes = {
+					D68A33DB20AB1BE5000F3CFD = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D68A33F220AB1BE5000F3CFD = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D68A33DB20AB1BE5000F3CFD;
+					};
+					D68A33FD20AB1BE5000F3CFD = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D68A33DB20AB1BE5000F3CFD;
+					};
+				};
+			};
+			buildConfigurationList = D68A33D720AB1BE5000F3CFD /* Build configuration list for PBXProject "Moviee" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D68A33D320AB1BE5000F3CFD;
+			productRefGroup = D68A33DD20AB1BE5000F3CFD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D68A33DB20AB1BE5000F3CFD /* Moviee */,
+				D68A33F220AB1BE5000F3CFD /* MovieeTests */,
+				D68A33FD20AB1BE5000F3CFD /* MovieeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D68A33DA20AB1BE5000F3CFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68A33ED20AB1BE5000F3CFD /* LaunchScreen.storyboard in Resources */,
+				D68A33EA20AB1BE5000F3CFD /* Assets.xcassets in Resources */,
+				D68A33E520AB1BE5000F3CFD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68A33F120AB1BE5000F3CFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68A33FC20AB1BE5000F3CFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D68A33D820AB1BE5000F3CFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68A33E820AB1BE5000F3CFD /* Moviee.xcdatamodeld in Sources */,
+				D68A33E220AB1BE5000F3CFD /* ViewController.swift in Sources */,
+				D68A33E020AB1BE5000F3CFD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68A33EF20AB1BE5000F3CFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68A33F820AB1BE5000F3CFD /* MovieeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D68A33FA20AB1BE5000F3CFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68A340320AB1BE5000F3CFD /* MovieeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D68A33F520AB1BE5000F3CFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D68A33DB20AB1BE5000F3CFD /* Moviee */;
+			targetProxy = D68A33F420AB1BE5000F3CFD /* PBXContainerItemProxy */;
+		};
+		D68A340020AB1BE5000F3CFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D68A33DB20AB1BE5000F3CFD /* Moviee */;
+			targetProxy = D68A33FF20AB1BE5000F3CFD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D68A33E320AB1BE5000F3CFD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D68A33E420AB1BE5000F3CFD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D68A33EB20AB1BE5000F3CFD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D68A33EC20AB1BE5000F3CFD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D68A340520AB1BE5000F3CFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D68A340620AB1BE5000F3CFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D68A340820AB1BE5000F3CFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJBSMAW62U;
+				INFOPLIST_FILE = Moviee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xmartsoft.Moviee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D68A340920AB1BE5000F3CFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJBSMAW62U;
+				INFOPLIST_FILE = Moviee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xmartsoft.Moviee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D68A340B20AB1BE5000F3CFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJBSMAW62U;
+				INFOPLIST_FILE = MovieeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xmartsoft.MovieeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moviee.app/Moviee";
+			};
+			name = Debug;
+		};
+		D68A340C20AB1BE5000F3CFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJBSMAW62U;
+				INFOPLIST_FILE = MovieeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xmartsoft.MovieeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moviee.app/Moviee";
+			};
+			name = Release;
+		};
+		D68A340E20AB1BE5000F3CFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJBSMAW62U;
+				INFOPLIST_FILE = MovieeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xmartsoft.MovieeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Moviee;
+			};
+			name = Debug;
+		};
+		D68A340F20AB1BE5000F3CFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJBSMAW62U;
+				INFOPLIST_FILE = MovieeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xmartsoft.MovieeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Moviee;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D68A33D720AB1BE5000F3CFD /* Build configuration list for PBXProject "Moviee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D68A340520AB1BE5000F3CFD /* Debug */,
+				D68A340620AB1BE5000F3CFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D68A340720AB1BE5000F3CFD /* Build configuration list for PBXNativeTarget "Moviee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D68A340820AB1BE5000F3CFD /* Debug */,
+				D68A340920AB1BE5000F3CFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D68A340A20AB1BE5000F3CFD /* Build configuration list for PBXNativeTarget "MovieeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D68A340B20AB1BE5000F3CFD /* Debug */,
+				D68A340C20AB1BE5000F3CFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D68A340D20AB1BE5000F3CFD /* Build configuration list for PBXNativeTarget "MovieeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D68A340E20AB1BE5000F3CFD /* Debug */,
+				D68A340F20AB1BE5000F3CFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D68A33E620AB1BE5000F3CFD /* Moviee.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D68A33E720AB1BE5000F3CFD /* Moviee.xcdatamodel */,
+			);
+			currentVersion = D68A33E720AB1BE5000F3CFD /* Moviee.xcdatamodel */;
+			path = Moviee.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D68A33D420AB1BE5000F3CFD /* Project object */;
+}
