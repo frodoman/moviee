@@ -14,4 +14,5 @@ let ConstUrlTextMovieDetailsMain = "https://api.themoviedb.org/3/movie/"
 let ConstUrlTextCollectionDetailsMain = "https://api.themoviedb.org/3/collection/"
 let ConstUrlTextImageDomain = "https://image.tmdb.org/t/p/w500/"
 
+let ConstTitleNowPlaying = "Now Playing"
 
