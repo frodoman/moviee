@@ -15,6 +15,16 @@ class MVMainViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.title = ConstTitleNowPlaying
+        
+        MVNetworkManager.shared.requestNowPlayingMoviesWith { (movies) in
+            guard let dMovies = movies, dMovies.count > 0
+                else
+            {
+                return
+            }
+            
+            print(dMovies)
+        }
     }
 
     override func didReceiveMemoryWarning() {
