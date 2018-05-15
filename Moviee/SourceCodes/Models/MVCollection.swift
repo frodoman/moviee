@@ -10,4 +10,20 @@ import UIKit
 
 class MVCollection: NSObject {
 
+    var collectionId : Int! = 0
+    var backdrop_path: String? = ""
+    var name: String? = ""
+    
+    init(fromDictionary dic: [String: Any]!)
+    {
+        super.init()
+        
+        if let idNum = dic["id"] as? NSNumber
+        {
+            self.collectionId = idNum.intValue
+        }
+        
+        self.backdrop_path = dic["backdrop_path"] as? String
+        self.name = dic["name"] as? String
+    }
 }
