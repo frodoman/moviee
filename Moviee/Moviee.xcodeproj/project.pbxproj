@@ -18,6 +18,8 @@
 		9A74857A20AB6FFF00AFB5E6 /* MVCollection+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857920AB6FFF00AFB5E6 /* MVCollection+ViewModel.swift */; };
 		9A74857C20AB71A400AFB5E6 /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857B20AB71A400AFB5E6 /* NetworkManagerTest.swift */; };
 		9A74857E20AB721D00AFB5E6 /* MockNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857D20AB721D00AFB5E6 /* MockNetworking.swift */; };
+		9A74858020AB951600AFB5E6 /* MVMoviePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857F20AB951600AFB5E6 /* MVMoviePresenter.swift */; };
+		9A74858220AB953F00AFB5E6 /* MVMovieViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74858120AB953F00AFB5E6 /* MVMovieViewProtocol.swift */; };
 		D68A33E020AB1BE5000F3CFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A33DF20AB1BE5000F3CFD /* AppDelegate.swift */; };
 		D68A33E220AB1BE5000F3CFD /* MVMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A33E120AB1BE5000F3CFD /* MVMainViewController.swift */; };
 		D68A33E520AB1BE5000F3CFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68A33E320AB1BE5000F3CFD /* Main.storyboard */; };
@@ -56,6 +58,8 @@
 		9A74857920AB6FFF00AFB5E6 /* MVCollection+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MVCollection+ViewModel.swift"; sourceTree = "<group>"; };
 		9A74857B20AB71A400AFB5E6 /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
 		9A74857D20AB721D00AFB5E6 /* MockNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworking.swift; sourceTree = "<group>"; };
+		9A74857F20AB951600AFB5E6 /* MVMoviePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVMoviePresenter.swift; sourceTree = "<group>"; };
+		9A74858120AB953F00AFB5E6 /* MVMovieViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVMovieViewProtocol.swift; sourceTree = "<group>"; };
 		D68A33DC20AB1BE5000F3CFD /* Moviee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moviee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68A33DF20AB1BE5000F3CFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D68A33E120AB1BE5000F3CFD /* MVMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVMainViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 		D68A341420AB1E50000F3CFD /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				9A74857F20AB951600AFB5E6 /* MVMoviePresenter.swift */,
+				9A74858120AB953F00AFB5E6 /* MVMovieViewProtocol.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -362,10 +368,12 @@
 				9A74857820AB6FE800AFB5E6 /* MVMovie+ViewModel.swift in Sources */,
 				9A74856E20AB6E5400AFB5E6 /* MVURLMaker.swift in Sources */,
 				9A74857A20AB6FFF00AFB5E6 /* MVCollection+ViewModel.swift in Sources */,
+				9A74858220AB953F00AFB5E6 /* MVMovieViewProtocol.swift in Sources */,
 				D68A33E820AB1BE5000F3CFD /* Moviee.xcdatamodeld in Sources */,
 				D68A341820AB2B00000F3CFD /* MVConsts.swift in Sources */,
 				9A74857620AB6F6A00AFB5E6 /* MVCollection.swift in Sources */,
 				D68A33E220AB1BE5000F3CFD /* MVMainViewController.swift in Sources */,
+				9A74858020AB951600AFB5E6 /* MVMoviePresenter.swift in Sources */,
 				9A74857220AB6EF200AFB5E6 /* MVNetworkManager.swift in Sources */,
 				D68A33E020AB1BE5000F3CFD /* AppDelegate.swift in Sources */,
 			);
