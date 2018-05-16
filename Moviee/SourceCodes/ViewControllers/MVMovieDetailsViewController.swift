@@ -47,9 +47,12 @@ class MVMovieDetailsViewController: MVBaseViewController, MVMovieViewProtocol {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         
-        self.moviePresenter.getMovieDetails(withId: self.movieData.id)
+        if !self.viewDidAppeared
+        {
+            self.moviePresenter.getMovieDetails(withId: self.movieData.id)
+        }
+        super.viewDidAppear(animated)
     }
 
     /*
