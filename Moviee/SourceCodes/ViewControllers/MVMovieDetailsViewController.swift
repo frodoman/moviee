@@ -108,4 +108,13 @@ class MVMovieDetailsViewController: MVBaseViewController, MVMovieViewProtocol {
         }
     }
     
+    @IBAction func buttonCollectionTapped(_ sender: UIButton!)
+    {
+        if let collection = self.movieDetails?.belongs_to_collection
+        {
+            let collectionVC = MVCollectionViewController.init(withCollection: collection)
+            self.navigationController?.pushViewController(collectionVC, animated: true)
+        }
+    }
+    
 }
