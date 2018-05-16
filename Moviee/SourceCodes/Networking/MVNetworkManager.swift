@@ -17,6 +17,7 @@ class MVNetworkManager: NSObject {
         super.init()
     }
     
+    //MARK: - Movies API
     func requestNowPlayingMoviesWith(_ handler: @escaping ([MVMovie]?)->Void ) -> Void
     {
         let task = URLSession.shared.dataTask(with:  URL.init(string:  ConstUrlTextNowPlaying)!)
@@ -50,6 +51,33 @@ class MVNetworkManager: NSObject {
         task.resume()
     }
     
+    func requestMovieDetailsWith(movieId mId: Int!,
+                             callBack handler: @escaping (MVMovie?)->Void) ->Void
+    {
+        let url = URL.init(string:  MVURLMaker.movieDetailsUrlWith( String(mId!)))
+        let task = URLSession.shared.dataTask(with: url!) { (mData, response, error) in
+            
+            guard error == nil, mData != nil
+                else
+            {
+                handler(nil)
+                return
+            }
+            
+            if let dicResult = try? JSONSerialization.jsonObject(with: mData!, options: .allowFragments) as? [String: Any]
+            {
+                let aMovie = MVMovie.init(fromDictionary: dicResult)
+                handler(aMovie)
+                return
+            }
+            
+            handler(nil)
+        }
+        
+        task.resume()
+    }
+    
+    // MARK: - Image API
     func requestImageFor(path imgPath: String!,
                          callback handler: @escaping (UIImage?)->Void)
     {
@@ -62,6 +90,9 @@ class MVNetworkManager: NSObject {
             {
                 img = UIImage.init(data: imgData)
             }
+            
+            // TODO: - Save the image file locally
+            // with the path name into the file system
             
             DispatchQueue.main.sync(execute: {
                  handler(img)

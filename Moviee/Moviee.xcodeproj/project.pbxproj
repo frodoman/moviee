@@ -33,6 +33,8 @@
 		D68A341C20AC33EE000F3CFD /* MVBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A341B20AC33EE000F3CFD /* MVBaseViewController.swift */; };
 		D68A342320AC3EE5000F3CFD /* MVMovieCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A342120AC3EE5000F3CFD /* MVMovieCollectionCell.swift */; };
 		D68A342420AC3EE5000F3CFD /* MVMovieCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68A342220AC3EE5000F3CFD /* MVMovieCollectionCell.xib */; };
+		D68A342820AC5887000F3CFD /* MVMovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A342620AC5887000F3CFD /* MVMovieDetailsViewController.swift */; };
+		D68A342920AC5887000F3CFD /* MVMovieDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68A342720AC5887000F3CFD /* MVMovieDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		D68A341B20AC33EE000F3CFD /* MVBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVBaseViewController.swift; sourceTree = "<group>"; };
 		D68A342120AC3EE5000F3CFD /* MVMovieCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVMovieCollectionCell.swift; sourceTree = "<group>"; };
 		D68A342220AC3EE5000F3CFD /* MVMovieCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVMovieCollectionCell.xib; sourceTree = "<group>"; };
+		D68A342620AC5887000F3CFD /* MVMovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVMovieDetailsViewController.swift; sourceTree = "<group>"; };
+		D68A342720AC5887000F3CFD /* MVMovieDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVMovieDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,8 @@
 			children = (
 				D68A33E120AB1BE5000F3CFD /* MVMainViewController.swift */,
 				D68A341B20AC33EE000F3CFD /* MVBaseViewController.swift */,
+				D68A342620AC5887000F3CFD /* MVMovieDetailsViewController.swift */,
+				D68A342720AC5887000F3CFD /* MVMovieDetailsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -353,6 +359,7 @@
 				D68A342420AC3EE5000F3CFD /* MVMovieCollectionCell.xib in Resources */,
 				D68A33EA20AB1BE5000F3CFD /* Assets.xcassets in Resources */,
 				D68A33E520AB1BE5000F3CFD /* Main.storyboard in Resources */,
+				D68A342920AC5887000F3CFD /* MVMovieDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +393,7 @@
 				D68A341820AB2B00000F3CFD /* MVConsts.swift in Sources */,
 				9A74857620AB6F6A00AFB5E6 /* MVCollection.swift in Sources */,
 				D68A33E220AB1BE5000F3CFD /* MVMainViewController.swift in Sources */,
+				D68A342820AC5887000F3CFD /* MVMovieDetailsViewController.swift in Sources */,
 				D68A341A20AC2DE6000F3CFD /* UIView+Common.swift in Sources */,
 				9A74858020AB951600AFB5E6 /* MVMoviePresenter.swift in Sources */,
 				9A74857220AB6EF200AFB5E6 /* MVNetworkManager.swift in Sources */,

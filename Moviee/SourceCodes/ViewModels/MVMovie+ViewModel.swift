@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import UIKit
+
+extension MVMovie
+{
+    // TODO:
+    // check the image file locally, if not exist,
+    // send request to load the image
+    func mainImage() -> UIImage?
+    {
+        return nil
+    }
+}

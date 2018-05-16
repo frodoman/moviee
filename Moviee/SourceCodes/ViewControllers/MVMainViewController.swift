@@ -35,7 +35,7 @@ class MVMainViewController: UIViewController, MVMovieViewProtocol,UICollectionVi
         // Dispose of any resources that can be recreated.
     }
 
-
+    // MARK: - MVMovieViewProtocol
     func startWaiting() {
         self.view.showWaitingAnimation()
     }
@@ -56,6 +56,7 @@ class MVMainViewController: UIViewController, MVMovieViewProtocol,UICollectionVi
             print("No movies")
         }
     }
+    
     //MARK: - Setting UP UIs
     func setupCollectionView()
     {
@@ -93,7 +94,9 @@ class MVMainViewController: UIViewController, MVMovieViewProtocol,UICollectionVi
     }
     //MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let selectedMovie = self.movies[indexPath.row]
+        let detailsVC = MVMovieDetailsViewController.init(movie: selectedMovie, showCollection: true)
+        self.navigationController?.pushViewController(detailsVC, animated: true)
     }
     
     //MARK: - UICollectionViewDelegateFlowLayout

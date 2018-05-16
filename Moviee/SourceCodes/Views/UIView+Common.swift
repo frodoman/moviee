@@ -18,6 +18,7 @@ extension UIView
         maskView.tag = ConstViewTagMask
         maskView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
+        self.addSubview(maskView)
         
         let spinner = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
         spinner.tag = ConstViewTagSpinner
@@ -26,21 +27,10 @@ extension UIView
         
         maskView.addSubview(spinner)
         
-        self.addSubview(maskView)
     }
     
     func hideWaitingAnimation()
     {
-//        for aView in self.subviews
-//        {
-//            if let spinner = aView as? UIActivityIndicatorView,
-//               aView.tag == ConstViewTagSpinner
-//            {
-//                spinner.stopAnimating()
-//                spinner.removeFromSuperview()
-//                break
-//            }
-//        }
         for aView in self.subviews
         {
             if aView.tag == ConstViewTagMask

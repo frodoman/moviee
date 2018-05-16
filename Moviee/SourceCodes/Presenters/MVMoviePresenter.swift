@@ -36,5 +36,13 @@ class MVMoviePresenter: NSObject {
     func getMovieDetails(withId movieId: Int!)
     {
         self.targetView?.startWaiting()
+        MVNetworkManager.shared.requestMovieDetailsWith(movieId: movieId) { (aMovie) in
+            DispatchQueue.main.async(execute: {
+                self.targetView?.stopWaiting()
+                self.targetView?.showMovieDetails!(aMovie)
+            })
+        }
     }
+    
+    
 }
