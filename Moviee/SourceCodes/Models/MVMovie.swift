@@ -10,7 +10,7 @@ import UIKit
 
 class MVMovie: NSObject {
     var id: Int? = 0
-    var name: String? = ""
+    var title: String? = ""
     var imgPath: String? = ""
     var belongs_to_collection: MVCollection?
     var rating: NSNumber?
@@ -24,7 +24,7 @@ class MVMovie: NSObject {
             self.id = idNum.intValue
         }
         
-        self.name = dic["name"] as? String
+        self.title = dic["title"] as? String
         self.imgPath = dic["poster_path"] as? String
         self.rating = dic["vote_average"] as? NSNumber
         

@@ -27,4 +27,5 @@ let ConstViewTagMask: Int    = 894382
 let ConstViewTagSpinner: Int = 123867
 let ConstViewSpinnerWidth: CGFloat = 50.0
 
-
+// Movie
+let ConstMovieCollectionCellId = "MVMovieCollectionCell"
