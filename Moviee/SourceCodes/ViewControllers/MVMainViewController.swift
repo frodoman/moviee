@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MVMainViewController: UIViewController, MVMovieViewProtocol,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+class MVMainViewController: MVBaseViewController, MVMovieViewProtocol,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionViewMovies: UICollectionView!
     
@@ -25,9 +25,13 @@ class MVMainViewController: UIViewController, MVMovieViewProtocol,UICollectionVi
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         
-        self.moviePresenter.getNowPlayingMovies()
+        if !self.viewDidAppeared
+        {
+            self.moviePresenter.getNowPlayingMovies()
+        }
+        
+        super.viewDidAppear(animated)
     }
     
     override func didReceiveMemoryWarning() {

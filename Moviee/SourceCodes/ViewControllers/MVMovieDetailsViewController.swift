@@ -8,13 +8,15 @@
 
 import UIKit
 
-class MVMovieDetailsViewController: UIViewController, MVMovieViewProtocol {
+class MVMovieDetailsViewController: MVBaseViewController, MVMovieViewProtocol {
 
+    @IBOutlet weak var buttonCollection: UIButton!
     @IBOutlet weak var textViewDetails: UITextView!
     @IBOutlet weak var movieImage: UIImageView!
     
     var includeCollection: Bool = false
     var movieData: MVMovie!
+    var movieDetails: MVMovie?
     let moviePresenter = MVMoviePresenter()
     
     init(movie mData: MVMovie!, showCollection includeCollection: Bool)
@@ -35,6 +37,8 @@ class MVMovieDetailsViewController: UIViewController, MVMovieViewProtocol {
         // Do any additional setup after loading the view.
         self.moviePresenter.attachTo(self)
         self.title = self.movieData.title
+        
+        self.updateCollectionUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,7 +61,7 @@ class MVMovieDetailsViewController: UIViewController, MVMovieViewProtocol {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
     // MARK: - MVMovieViewProtocol
     func startWaiting() {
         self.view.showWaitingAnimation()
@@ -72,6 +76,7 @@ class MVMovieDetailsViewController: UIViewController, MVMovieViewProtocol {
         {
             self.textViewDetails.text = movieDetails.overView
             self.getMovieImage(movieDetails.backdropPath)
+            self.movieDetails = movieDetails
         }
     }
     
@@ -89,6 +94,18 @@ class MVMovieDetailsViewController: UIViewController, MVMovieViewProtocol {
         }
     }
     
-    // Collections
+    // MARK: - Collection
+    func updateCollectionUI()
+    {
+        self.buttonCollection.isHidden = true
+        
+        if self.includeCollection
+        {
+            if let _ = self.movieDetails?.belongs_to_collection
+            {
+                self.buttonCollection.isHidden = false
+            }
+        }
+    }
     
 }
