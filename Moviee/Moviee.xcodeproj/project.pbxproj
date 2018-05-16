@@ -37,8 +37,6 @@
 		D68A342420AC3EE5000F3CFD /* MVMovieCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68A342220AC3EE5000F3CFD /* MVMovieCollectionCell.xib */; };
 		D68A342820AC5887000F3CFD /* MVMovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A342620AC5887000F3CFD /* MVMovieDetailsViewController.swift */; };
 		D68A342920AC5887000F3CFD /* MVMovieDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68A342720AC5887000F3CFD /* MVMovieDetailsViewController.xib */; };
-		D68A342E20AC80EE000F3CFD /* MVCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A342C20AC80EE000F3CFD /* MVCollectionViewController.swift */; };
-		D68A342F20AC80EE000F3CFD /* MVCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D68A342D20AC80EE000F3CFD /* MVCollectionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +91,6 @@
 		D68A342220AC3EE5000F3CFD /* MVMovieCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVMovieCollectionCell.xib; sourceTree = "<group>"; };
 		D68A342620AC5887000F3CFD /* MVMovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVMovieDetailsViewController.swift; sourceTree = "<group>"; };
 		D68A342720AC5887000F3CFD /* MVMovieDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVMovieDetailsViewController.xib; sourceTree = "<group>"; };
-		D68A342C20AC80EE000F3CFD /* MVCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCollectionViewController.swift; sourceTree = "<group>"; };
-		D68A342D20AC80EE000F3CFD /* MVCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVCollectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,8 +212,6 @@
 				D68A341B20AC33EE000F3CFD /* MVBaseViewController.swift */,
 				D68A342620AC5887000F3CFD /* MVMovieDetailsViewController.swift */,
 				D68A342720AC5887000F3CFD /* MVMovieDetailsViewController.xib */,
-				D68A342C20AC80EE000F3CFD /* MVCollectionViewController.swift */,
-				D68A342D20AC80EE000F3CFD /* MVCollectionViewController.xib */,
 				9A74858320ACDC8900AFB5E6 /* MVMovieGridViewController.swift */,
 				9A74858420ACDC8900AFB5E6 /* MVMovieGridViewController.xib */,
 			);
@@ -373,7 +367,6 @@
 				D68A33EA20AB1BE5000F3CFD /* Assets.xcassets in Resources */,
 				D68A33E520AB1BE5000F3CFD /* Main.storyboard in Resources */,
 				D68A342920AC5887000F3CFD /* MVMovieDetailsViewController.xib in Resources */,
-				D68A342F20AC80EE000F3CFD /* MVCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +395,6 @@
 				9A74857820AB6FE800AFB5E6 /* MVMovie+ViewModel.swift in Sources */,
 				9A74856E20AB6E5400AFB5E6 /* MVURLMaker.swift in Sources */,
 				9A74857A20AB6FFF00AFB5E6 /* MVCollection+ViewModel.swift in Sources */,
-				D68A342E20AC80EE000F3CFD /* MVCollectionViewController.swift in Sources */,
 				9A74858220AB953F00AFB5E6 /* MVMovieViewProtocol.swift in Sources */,
 				D68A33E820AB1BE5000F3CFD /* Moviee.xcdatamodeld in Sources */,
 				D68A341820AB2B00000F3CFD /* MVConsts.swift in Sources */,
