@@ -8,7 +8,7 @@
 
 import UIKit
 
-class URLMaker: NSObject
+class MVURLMaker: NSObject
 {
     static func collectionDetailsUrlWith(_ collectionId: String!)->String!
     {
@@ -24,5 +24,11 @@ class URLMaker: NSObject
         // https://api.themoviedb.org/3/movie/9999889?api_key=ad358c8a9834dcfc74af82859aa03a62&language=en-US
         let url = ConstUrlTextMovieDetailsMain + movieId + "?api_key=" + ConstAPIKey
         return url
+    }
+    
+    static func imageURLForPath(_ path: String!) -> String!
+    {
+        let imgUrl = ConstUrlTextImageDomain + path
+        return imgUrl
     }
 }

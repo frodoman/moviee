@@ -13,7 +13,7 @@ class MVMovieCollectionCell: UICollectionViewCell {
     @IBOutlet weak var imageViewPost: UIImageView!
     @IBOutlet weak var labelMovieName: UILabel!
     
-    var movieData: MVMovie?
+    weak var movieData: MVMovie?
     var lastImagePath: String! = ""
     
     override func awakeFromNib() {
@@ -34,6 +34,15 @@ class MVMovieCollectionCell: UICollectionViewCell {
     
     func requestPostImage()
     {
-        
+        if let imgPath = self.movieData?.imgPath
+        {
+            self.showWaitingAnimation()
+            MVNetworkManager.shared.requestImageFor(path: imgPath, callback: {[weak self] (anImage) in
+                self?.imageViewPost.image = anImage
+                self?.lastImagePath = imgPath
+                
+                self?.hideWaitingAnimation()
+            })
+        }
     }
 }

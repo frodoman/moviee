@@ -81,8 +81,6 @@ class MVMainViewController: UIViewController, MVMovieViewProtocol,UICollectionVi
             self.collectionViewMovies.register(UINib(nibName: cellID, bundle: nil), forCellWithReuseIdentifier: cellID)
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as? MVMovieCollectionCell
         }
-        
-        cell!.backgroundColor = UIColor.lightGray
         return cell!
     }
     

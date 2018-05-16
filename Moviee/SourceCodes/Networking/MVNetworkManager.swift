@@ -11,6 +11,8 @@ import UIKit
 class MVNetworkManager: NSObject {
     static let shared = MVNetworkManager()
     
+    let imageQueue = OperationQueue()
+    
     override init() {
         super.init()
     }
@@ -46,5 +48,26 @@ class MVNetworkManager: NSObject {
         }
         
         task.resume()
+    }
+    
+    func requestImageFor(path imgPath: String!,
+                         callback handler: @escaping (UIImage?)->Void)
+    {
+        let urlText = MVURLMaker.imageURLForPath(imgPath)
+        
+        let operation = BlockOperation.init {
+            var img : UIImage? = nil
+            
+            if let imgData = try? Data.init(contentsOf: URL.init(string: urlText!)!)
+            {
+                img = UIImage.init(data: imgData)
+            }
+            
+            DispatchQueue.main.sync(execute: {
+                 handler(img)
+            })
+        }
+        
+        self.imageQueue.addOperation(operation)
     }
 }

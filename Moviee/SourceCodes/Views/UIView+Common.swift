@@ -13,25 +13,39 @@ extension UIView
 {
     func showWaitingAnimation()
     {
-        let spinner = UIActivityIndicatorView.init(activityIndicatorStyle: .gray)
-        spinner.tag = ConstViewTagSpinner
-        spinner.frame = CGRect(x: (self.frame.size.width - ConstViewSpinnerWidth)/2.0,
-                               y: (self.frame.size.height - ConstViewSpinnerWidth)/2.0,
-                               width: ConstViewSpinnerWidth,
-                               height: ConstViewSpinnerWidth)
+        let maskView = UIView.init(frame: self.bounds)
+        maskView.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        maskView.tag = ConstViewTagMask
+        maskView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        self.addSubview(spinner)
+        
+        let spinner = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+        spinner.tag = ConstViewTagSpinner
+        spinner.center = maskView.center;
+        spinner.startAnimating()
+        
+        maskView.addSubview(spinner)
+        
+        self.addSubview(maskView)
     }
     
     func hideWaitingAnimation()
     {
+//        for aView in self.subviews
+//        {
+//            if let spinner = aView as? UIActivityIndicatorView,
+//               aView.tag == ConstViewTagSpinner
+//            {
+//                spinner.stopAnimating()
+//                spinner.removeFromSuperview()
+//                break
+//            }
+//        }
         for aView in self.subviews
         {
-            if let spinner = aView as? UIActivityIndicatorView,
-               aView.tag == ConstViewTagSpinner
+            if aView.tag == ConstViewTagMask
             {
-                spinner.stopAnimating()
-                spinner.removeFromSuperview()
+                aView.removeFromSuperview()
                 break
             }
         }
