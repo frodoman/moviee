@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MVMainViewController: MVBaseViewController, MVMovieViewProtocol,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+class MVMainViewController: MVBaseViewController {
     
     @IBOutlet weak var collectionViewMovies: UICollectionView!
     
@@ -38,14 +38,24 @@ class MVMainViewController: MVBaseViewController, MVMovieViewProtocol,UICollecti
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK: - Setting UP UIs
+    func setupCollectionView()
+    {
+        self.collectionViewMovies.register(UINib(nibName: ConstMovieCollectionCellId, bundle: nil), forCellWithReuseIdentifier: ConstMovieCollectionCellId)
+    }
 
-    // MARK: - MVMovieViewProtocol
+}
+
+// MARK: - MVMovieViewProtocol
+extension MVMainViewController: MVMovieViewProtocol
+{
     func startWaiting() {
         self.view.showWaitingAnimation()
     }
-
+    
     func stopWaiting() {
-         self.view.hideWaitingAnimation()
+        self.view.hideWaitingAnimation()
     }
     
     func showPlayingMovies(_ movies: [MVMovie]?) {
@@ -60,13 +70,11 @@ class MVMainViewController: MVBaseViewController, MVMovieViewProtocol,UICollecti
             print("No movies")
         }
     }
-    
-    //MARK: - Setting UP UIs
-    func setupCollectionView()
-    {
-        self.collectionViewMovies.register(UINib(nibName: ConstMovieCollectionCellId, bundle: nil), forCellWithReuseIdentifier: ConstMovieCollectionCellId)
-    }
-    
+}
+
+//MARK: - UICollectionView
+extension MVMainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate
+{
     //MARK: - UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -125,6 +133,5 @@ class MVMainViewController: MVBaseViewController, MVMovieViewProtocol,UICollecti
                         insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.zero
     }
-
 }
 
