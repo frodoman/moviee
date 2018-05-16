@@ -44,5 +44,15 @@ class MVMoviePresenter: NSObject {
         }
     }
     
+    func getCollectionMoviesFor(movie aMovie: MVMovie!)
+    {
+        self.targetView?.startWaiting()
+        MVNetworkManager.shared.requestCollectionMoviesFor(movie: aMovie) { (movies) in
+            DispatchQueue.main.sync(execute: {
+                self.targetView?.stopWaiting()
+                self.targetView?.showCollectionMovies!(movies)
+            })
+        }
+    }
     
 }

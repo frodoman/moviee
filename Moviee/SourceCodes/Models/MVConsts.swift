@@ -13,7 +13,8 @@ import UIKit
 let ConstAPIKey = "ad358c8a9834dcfc74af82859aa03a62"
 let ConstUrlTextNowPlaying = "https://api.themoviedb.org/3/movie/now_playing?api_key="+ConstAPIKey+"&page=1"
 let ConstUrlTextMovieDetailsMain = "https://api.themoviedb.org/3/movie/"
-let ConstUrlTextCollectionDetailsMain = "https://api.themoviedb.org/3/collection/"
+let ConstUrlTextCollectionDetailsMain = "https://api.themoviedb.org/3/collection"
+let ConstUrlTextCollectionSearchMain = "https://api.themoviedb.org/3/search/collection"
 let ConstUrlTextImageDomain = "https://image.tmdb.org/t/p/w500/"
 
 // titles

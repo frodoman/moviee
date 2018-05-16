@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias MVMovieListCallBack = ([MVMovie]?)->Void
+
 class MVNetworkManager: NSObject {
     static let shared = MVNetworkManager()
     
@@ -18,13 +20,20 @@ class MVNetworkManager: NSObject {
     }
     
     //MARK: - Movies API
-    func requestNowPlayingMoviesWith(_ handler: @escaping ([MVMovie]?)->Void ) -> Void
+    func requestNowPlayingMoviesWith(_ handler: @escaping MVMovieListCallBack ) -> Void
     {
-        let task = URLSession.shared.dataTask(with:  URL.init(string:  ConstUrlTextNowPlaying)!)
+        self.requestMovieListFrom(ConstUrlTextNowPlaying, callBack: handler)
+    }
+    
+    func requestMovieListFrom( _ urlText: String!,
+                               callBack handler : @escaping MVMovieListCallBack )
+    {
+        let url = URL.init(string: urlText)
+        let task = URLSession.shared.dataTask(with: url!)
         { (mData, response, error) in
             
             guard error == nil, mData != nil
-            else
+                else
             {
                 handler(nil)
                 return
@@ -32,10 +41,16 @@ class MVNetworkManager: NSObject {
             
             if let dicResult = try? JSONSerialization.jsonObject(with: mData!, options: .allowFragments) as? [String: Any]
             {
-                if let movieArray = dicResult![ConstJsonKeyResults] as? [[String: Any]]
+                var movieArray = dicResult![ConstJsonKeyResults] as? [[String: Any]]
+                if movieArray == nil
+                {
+                    movieArray = dicResult!["parts"] as? [[String: Any]]
+                }
+                
+                if movieArray != nil
                 {
                     var returnMovies : [MVMovie] = []
-                    for oneMovie in movieArray
+                    for oneMovie in movieArray!
                     {
                         let aMovie = MVMovie.init(fromDictionary: oneMovie)
                         returnMovies.append(aMovie)
@@ -75,6 +90,71 @@ class MVNetworkManager: NSObject {
         }
         
         task.resume()
+    }
+    
+    func requestCollectionWith(query keywords: String!,
+                               callBack handler: @escaping ([MVCollection]?)->Void)
+    {
+        let urlText = MVURLMaker.collectionQueryUrlWith( keywords)
+        let url = URL.init(string: urlText!)
+        
+        let task = URLSession.shared.dataTask(with: url!) { (mData, response, error) in
+            
+            guard error == nil, mData != nil
+                else
+            {
+                handler(nil)
+                return
+            }
+            
+            if let dicResult = try? JSONSerialization.jsonObject(with: mData!, options: .allowFragments) as? [String: Any]
+            {
+                if let collectionArray = dicResult![ConstJsonKeyResults] as? [[String: Any]]
+                {
+                    var collections : [MVCollection] = []
+                    for oneDic in collectionArray
+                    {
+                        let aCollection = MVCollection.init(fromDictionary: oneDic)
+                        collections.append(aCollection)
+                    }
+                    handler(collections)
+                    return
+                }
+            }
+            
+            handler(nil)
+        }
+        
+        task.resume()
+    }
+    
+    func requestCollectionMoviesFor( movie aMovie: MVMovie!,
+                                    callBack handler: @escaping MVMovieListCallBack )
+    {
+        if let title = aMovie.title
+        {
+            var keywords = title
+            if title.contains(":")
+            {
+                keywords = title.components(separatedBy: ":").first!
+            }
+            
+            self.requestCollectionWith(query: keywords, callBack: { (collections) in
+                guard let cArray = collections,
+                    cArray.count > 0
+                else
+                {
+                    handler(nil)
+                    return
+                }
+                
+                // TODO: fetch all movies for all collections,
+                // For now, we will just fetch movies for the first collection
+                let collectionId = String((collections![0]).collectionId)
+                let urlText = MVURLMaker.collectionMoviesUrlWith(collectionId)
+                self.requestMovieListFrom(urlText, callBack: handler)
+            })
+        }
     }
     
     // MARK: - Image API

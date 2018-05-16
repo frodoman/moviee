@@ -10,11 +10,19 @@ import UIKit
 
 class MVURLMaker: NSObject
 {
-    static func collectionDetailsUrlWith(_ collectionId: String!)->String!
+    static func collectionQueryUrlWith(_ keyword: String!)->String!
+    {
+        // example:
+        // https://api.themoviedb.org/3/search/collection?api_key=xxx&query=Avengers&page=1
+        let url = ConstUrlTextCollectionSearchMain + "?api_key=" + ConstAPIKey + "&query=" + keyword + "&page=1"
+        return url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+    }
+    
+    static func collectionMoviesUrlWith(_ collectionId: String!)->String!
     {
         // example:
         // https://api.themoviedb.org/3/collection/99090?api_key=ad358c8a9834dcfc74af82859aa03a62&language=en-US
-        let url = ConstUrlTextCollectionDetailsMain + collectionId + "?api_key=" + ConstAPIKey
+        let url = ConstUrlTextCollectionDetailsMain + "/" + collectionId + "?api_key=" + ConstAPIKey
         return url
     }
     

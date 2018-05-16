@@ -37,8 +37,7 @@ class MVMovieDetailsViewController: MVBaseViewController, MVMovieViewProtocol {
         // Do any additional setup after loading the view.
         self.moviePresenter.attachTo(self)
         self.title = self.movieData.title
-        
-        self.updateCollectionUI()
+        self.movieImage.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,6 +50,7 @@ class MVMovieDetailsViewController: MVBaseViewController, MVMovieViewProtocol {
         if !self.viewDidAppeared
         {
             self.moviePresenter.getMovieDetails(withId: self.movieData.id)
+            self.moviePresenter.getCollectionMoviesFor(movie: self.movieData)
         }
         super.viewDidAppear(animated)
     }
@@ -80,6 +80,13 @@ class MVMovieDetailsViewController: MVBaseViewController, MVMovieViewProtocol {
             self.textViewDetails.text = movieDetails.overView
             self.getMovieImage(movieDetails.backdropPath)
             self.movieDetails = movieDetails
+        }
+    }
+    
+    func showCollectionMovies(_ movies: [MVMovie]?) {
+        if let cMovies = movies
+        {
+            
         }
     }
     
