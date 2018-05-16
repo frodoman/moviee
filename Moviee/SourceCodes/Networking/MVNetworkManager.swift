@@ -29,7 +29,7 @@ class MVNetworkManager: NSObject {
             
             if let dicResult = try? JSONSerialization.jsonObject(with: mData!, options: .allowFragments) as? [String: Any]
             {
-                if let movieArray = dicResult!["results"] as? [[String: Any]]
+                if let movieArray = dicResult![ConstJsonKeyResults] as? [[String: Any]]
                 {
                     var returnMovies : [MVMovie] = []
                     for oneMovie in movieArray

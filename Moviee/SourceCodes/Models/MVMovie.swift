@@ -11,7 +11,9 @@ import UIKit
 class MVMovie: NSObject {
     var id: Int? = 0
     var name: String? = ""
+    var imgPath: String? = ""
     var belongs_to_collection: MVCollection?
+    var rating: NSNumber?
     
     init(fromDictionary dic: [String: Any]!)
     {
@@ -23,6 +25,8 @@ class MVMovie: NSObject {
         }
         
         self.name = dic["name"] as? String
+        self.imgPath = dic["poster_path"] as? String
+        self.rating = dic["vote_average"] as? NSNumber
         
         if let collectionDic = dic["belongs_to_collection"] as? [String: Any]
         {
