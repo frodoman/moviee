@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // API URLs
 let ConstAPIKey = "ad358c8a9834dcfc74af82859aa03a62"
@@ -20,4 +21,10 @@ let ConstTitleNowPlaying = "Now Playing"
 
 // For JSON keys
 let ConstJsonKeyResults = "results"
+
+// Animation
+let ConstViewTagMask: Int    = 894382
+let ConstViewTagSpinner: Int = 123867
+let ConstViewSpinnerWidth: CGFloat = 50.0
+
 

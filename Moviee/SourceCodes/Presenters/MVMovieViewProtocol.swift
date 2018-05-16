@@ -8,10 +8,11 @@
 
 import Foundation
 
-protocol MVMovieViewProtocol {
+@objc protocol MVMovieViewProtocol: NSObjectProtocol {
     func startWaiting()
     func stopWaiting()
-    func showMovies()
-    func showMovieDetails()
-    func showCollectionMovies()
+    
+    @objc optional func showPlayingMovies( _ movies: [MVMovie]?)
+    @objc optional func showMovieDetails(_ movie: MVMovie?)
+    @objc optional func showCollectionMovies(_ movies: [MVMovie]?)
 }

@@ -29,6 +29,8 @@
 		D68A33F820AB1BE5000F3CFD /* MovieeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A33F720AB1BE5000F3CFD /* MovieeTests.swift */; };
 		D68A340320AB1BE5000F3CFD /* MovieeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A340220AB1BE5000F3CFD /* MovieeUITests.swift */; };
 		D68A341820AB2B00000F3CFD /* MVConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A341720AB2B00000F3CFD /* MVConsts.swift */; };
+		D68A341A20AC2DE6000F3CFD /* UIView+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A341920AC2DE6000F3CFD /* UIView+Common.swift */; };
+		D68A341C20AC33EE000F3CFD /* MVBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A341B20AC33EE000F3CFD /* MVBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		D68A340220AB1BE5000F3CFD /* MovieeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieeUITests.swift; sourceTree = "<group>"; };
 		D68A340420AB1BE5000F3CFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D68A341720AB2B00000F3CFD /* MVConsts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVConsts.swift; sourceTree = "<group>"; };
+		D68A341920AC2DE6000F3CFD /* UIView+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Common.swift"; sourceTree = "<group>"; };
+		D68A341B20AC33EE000F3CFD /* MVBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				D68A33E320AB1BE5000F3CFD /* Main.storyboard */,
+				D68A341920AC2DE6000F3CFD /* UIView+Common.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				D68A33E120AB1BE5000F3CFD /* MVMainViewController.swift */,
+				D68A341B20AC33EE000F3CFD /* MVBaseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -373,8 +379,10 @@
 				D68A341820AB2B00000F3CFD /* MVConsts.swift in Sources */,
 				9A74857620AB6F6A00AFB5E6 /* MVCollection.swift in Sources */,
 				D68A33E220AB1BE5000F3CFD /* MVMainViewController.swift in Sources */,
+				D68A341A20AC2DE6000F3CFD /* UIView+Common.swift in Sources */,
 				9A74858020AB951600AFB5E6 /* MVMoviePresenter.swift in Sources */,
 				9A74857220AB6EF200AFB5E6 /* MVNetworkManager.swift in Sources */,
+				D68A341C20AC33EE000F3CFD /* MVBaseViewController.swift in Sources */,
 				D68A33E020AB1BE5000F3CFD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +557,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJBSMAW62U;
 				INFOPLIST_FILE = Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmartsoft.Moviee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -564,6 +573,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJBSMAW62U;
 				INFOPLIST_FILE = Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmartsoft.Moviee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
