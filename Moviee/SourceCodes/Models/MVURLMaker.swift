@@ -26,9 +26,21 @@ class MVURLMaker: NSObject
         return url
     }
     
+    // MARK: - Image
     static func imageURLForPath(_ path: String!) -> String!
     {
         let imgUrl = ConstUrlTextImageDomain + path
         return imgUrl
+    }
+    
+    //TODO: Return a local file path/URL for a image path
+    static func imageFileURLForPath(_ path: String!) -> String?
+    {
+        return nil
+    }
+    //TODO: check if a image file exist
+    static func imageFileExistFor(_ path: String!) -> Bool
+    {
+        return false
     }
 }

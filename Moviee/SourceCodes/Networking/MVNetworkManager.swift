@@ -81,6 +81,18 @@ class MVNetworkManager: NSObject {
     func requestImageFor(path imgPath: String!,
                          callback handler: @escaping (UIImage?)->Void)
     {
+        //Use the local image
+        if MVURLMaker.imageFileExistFor(imgPath)
+        {
+            if let imgDir = MVURLMaker.imageURLForPath(imgPath)
+            {
+                let img = UIImage.init(contentsOfFile: imgDir )
+                handler(img)
+                return
+            }
+        }
+        
+        //request image from server
         let urlText = MVURLMaker.imageURLForPath(imgPath)
         
         let operation = BlockOperation.init {
