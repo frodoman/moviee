@@ -20,6 +20,8 @@
 		9A74857E20AB721D00AFB5E6 /* MockNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857D20AB721D00AFB5E6 /* MockNetworking.swift */; };
 		9A74858020AB951600AFB5E6 /* MVMoviePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74857F20AB951600AFB5E6 /* MVMoviePresenter.swift */; };
 		9A74858220AB953F00AFB5E6 /* MVMovieViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74858120AB953F00AFB5E6 /* MVMovieViewProtocol.swift */; };
+		9A74858520ACDC8900AFB5E6 /* MVMovieGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74858320ACDC8900AFB5E6 /* MVMovieGridViewController.swift */; };
+		9A74858620ACDC8900AFB5E6 /* MVMovieGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A74858420ACDC8900AFB5E6 /* MVMovieGridViewController.xib */; };
 		D68A33E020AB1BE5000F3CFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A33DF20AB1BE5000F3CFD /* AppDelegate.swift */; };
 		D68A33E220AB1BE5000F3CFD /* MVMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68A33E120AB1BE5000F3CFD /* MVMainViewController.swift */; };
 		D68A33E520AB1BE5000F3CFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D68A33E320AB1BE5000F3CFD /* Main.storyboard */; };
@@ -68,6 +70,8 @@
 		9A74857D20AB721D00AFB5E6 /* MockNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworking.swift; sourceTree = "<group>"; };
 		9A74857F20AB951600AFB5E6 /* MVMoviePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVMoviePresenter.swift; sourceTree = "<group>"; };
 		9A74858120AB953F00AFB5E6 /* MVMovieViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVMovieViewProtocol.swift; sourceTree = "<group>"; };
+		9A74858320ACDC8900AFB5E6 /* MVMovieGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVMovieGridViewController.swift; sourceTree = "<group>"; };
+		9A74858420ACDC8900AFB5E6 /* MVMovieGridViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVMovieGridViewController.xib; sourceTree = "<group>"; };
 		D68A33DC20AB1BE5000F3CFD /* Moviee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moviee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68A33DF20AB1BE5000F3CFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D68A33E120AB1BE5000F3CFD /* MVMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVMainViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +218,8 @@
 				D68A342720AC5887000F3CFD /* MVMovieDetailsViewController.xib */,
 				D68A342C20AC80EE000F3CFD /* MVCollectionViewController.swift */,
 				D68A342D20AC80EE000F3CFD /* MVCollectionViewController.xib */,
+				9A74858320ACDC8900AFB5E6 /* MVMovieGridViewController.swift */,
+				9A74858420ACDC8900AFB5E6 /* MVMovieGridViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 			files = (
 				D68A33ED20AB1BE5000F3CFD /* LaunchScreen.storyboard in Resources */,
 				D68A342420AC3EE5000F3CFD /* MVMovieCollectionCell.xib in Resources */,
+				9A74858620ACDC8900AFB5E6 /* MVMovieGridViewController.xib in Resources */,
 				D68A33EA20AB1BE5000F3CFD /* Assets.xcassets in Resources */,
 				D68A33E520AB1BE5000F3CFD /* Main.storyboard in Resources */,
 				D68A342920AC5887000F3CFD /* MVMovieDetailsViewController.xib in Resources */,
@@ -405,6 +412,7 @@
 				D68A341A20AC2DE6000F3CFD /* UIView+Common.swift in Sources */,
 				9A74858020AB951600AFB5E6 /* MVMoviePresenter.swift in Sources */,
 				9A74857220AB6EF200AFB5E6 /* MVNetworkManager.swift in Sources */,
+				9A74858520ACDC8900AFB5E6 /* MVMovieGridViewController.swift in Sources */,
 				D68A341C20AC33EE000F3CFD /* MVBaseViewController.swift in Sources */,
 				D68A342320AC3EE5000F3CFD /* MVMovieCollectionCell.swift in Sources */,
 				D68A33E020AB1BE5000F3CFD /* AppDelegate.swift in Sources */,

@@ -9,10 +9,13 @@
 import UIKit
 
 class MVMovieDetailsViewController: MVBaseViewController, MVMovieViewProtocol {
-
-    @IBOutlet weak var buttonCollection: UIButton!
     @IBOutlet weak var textViewDetails: UITextView!
     @IBOutlet weak var movieImage: UIImageView!
+    @IBOutlet weak var viewBottom: UIView!
+    @IBOutlet weak var labelCollection: UILabel!
+    @IBOutlet weak var textViewBottomConst: NSLayoutConstraint!
+    
+    var movieGridController: MVMovieGridViewController?
     
     var includeCollection: Bool = false
     var movieData: MVMovie!
@@ -24,6 +27,13 @@ class MVMovieDetailsViewController: MVBaseViewController, MVMovieViewProtocol {
         super.init(nibName: "MVMovieDetailsViewController", bundle: nil)
         self.movieData = mData
         self.includeCollection = includeCollection
+        
+        if self.includeCollection
+        {
+            self.movieGridController = MVMovieGridViewController()
+            self.movieGridController?.parentController = self
+            self.movieGridController?.showNextDetails = false
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,6 +50,19 @@ class MVMovieDetailsViewController: MVBaseViewController, MVMovieViewProtocol {
         self.movieImage.clipsToBounds = true
     }
 
+    override func viewDidLayoutSubviews() {
+        
+        self.labelCollection.isHidden = !self.includeCollection
+        self.viewBottom.isHidden = !self.includeCollection
+        
+        if !self.includeCollection
+        {
+            self.textViewBottomConst.constant = 0
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -50,7 +73,7 @@ class MVMovieDetailsViewController: MVBaseViewController, MVMovieViewProtocol {
         if !self.viewDidAppeared
         {
             self.moviePresenter.getMovieDetails(withId: self.movieData.id)
-            self.moviePresenter.getCollectionMoviesFor(movie: self.movieData)
+            self.movieGridController?.attachToView(self.viewBottom)
         }
         super.viewDidAppear(animated)
     }
@@ -81,12 +104,14 @@ class MVMovieDetailsViewController: MVBaseViewController, MVMovieViewProtocol {
             self.getMovieImage(movieDetails.backdropPath)
             self.movieDetails = movieDetails
         }
+        
+        self.moviePresenter.getCollectionMoviesFor(movie: self.movieData)
     }
     
     func showCollectionMovies(_ movies: [MVMovie]?) {
         if let cMovies = movies
         {
-            
+            self.movieGridController?.movies = cMovies
         }
     }
     
@@ -105,26 +130,5 @@ class MVMovieDetailsViewController: MVBaseViewController, MVMovieViewProtocol {
     }
     
     // MARK: - Collection
-    func updateCollectionUI()
-    {
-        self.buttonCollection.isHidden = true
-        
-        if self.includeCollection
-        {
-            if let _ = self.movieDetails?.belongs_to_collection
-            {
-                self.buttonCollection.isHidden = false
-            }
-        }
-    }
-    
-    @IBAction func buttonCollectionTapped(_ sender: UIButton!)
-    {
-        if let collection = self.movieDetails?.belongs_to_collection
-        {
-            let collectionVC = MVCollectionViewController.init(withCollection: collection)
-            self.navigationController?.pushViewController(collectionVC, animated: true)
-        }
-    }
     
 }
