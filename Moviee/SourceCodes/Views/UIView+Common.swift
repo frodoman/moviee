@@ -11,6 +11,7 @@ import UIKit
 
 extension UIView
 {
+    // show a waiting animation in a view with dark background
     func showWaitingAnimation()
     {
         let maskView = UIView.init(frame: self.bounds)
@@ -29,6 +30,7 @@ extension UIView
         
     }
     
+    // remove the waiting animation
     func hideWaitingAnimation()
     {
         for aView in self.subviews
