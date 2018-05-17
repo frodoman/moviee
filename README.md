@@ -1,11 +1,12 @@
 # moviee
-An iOS demo app of using API from TheMovieDB.org
+An iOS demo app of using APIs from TheMovieDB.org for: 
+1. Rquesting the 'Now Playing' movies
+2. Fetching the details of a movie 
+3. Fetching related movies in the same collection, from a given movie
 
-Due to the lack of time, these functions still need to implement fully: 
-
-1. More Unit testing to test all the model related functions. 
-2. The API request for collection details. 
-3. The view/UI/presenter for showing a collection of movies. 
+How to run: 
+Clone this repo then open the Moviee.xcodeproj file with Xcode 9, 
+you should be able to build and run the app on iOS simulators. 
 
 
 
