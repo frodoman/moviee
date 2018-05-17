@@ -19,6 +19,18 @@ class MVNetworkManager: NSObject {
         super.init()
     }
     
+    //MARK: - JSON request
+    func jsonRequest(with urlText: String!,
+                     completion handler: @escaping (Data?, URLResponse?, Error?)->Void )
+    {
+        let url = URL.init(string: urlText)
+        let task = URLSession.shared.dataTask(with: url!)
+        { (mData, response, error) in
+            handler(mData, response, error)
+        }
+        task.resume()
+    }
+    
     //MARK: - Movies API
     func requestNowPlayingMoviesWith(_ handler: @escaping MVMovieListCallBack ) -> Void
     {
@@ -28,9 +40,7 @@ class MVNetworkManager: NSObject {
     func requestMovieListFrom( _ urlText: String!,
                                callBack handler : @escaping MVMovieListCallBack )
     {
-        let url = URL.init(string: urlText)
-        let task = URLSession.shared.dataTask(with: url!)
-        { (mData, response, error) in
+        self.jsonRequest(with: urlText) { (mData, response, error) in
             
             guard error == nil, mData != nil
                 else
@@ -59,18 +69,15 @@ class MVNetworkManager: NSObject {
                     return
                 }
             }
-            
             handler(nil)
         }
-        
-        task.resume()
     }
     
     func requestMovieDetailsWith(movieId mId: Int!,
                              callBack handler: @escaping (MVMovie?)->Void) ->Void
     {
-        let url = URL.init(string:  MVURLMaker.movieDetailsUrlWith( String(mId!)))
-        let task = URLSession.shared.dataTask(with: url!) { (mData, response, error) in
+         self.jsonRequest(with: MVURLMaker.movieDetailsUrlWith(String(mId!)))
+         { (mData, response, error) in
             
             guard error == nil, mData != nil
                 else
@@ -88,17 +95,15 @@ class MVNetworkManager: NSObject {
             
             handler(nil)
         }
-        
-        task.resume()
     }
     
+    //MARK: Collection APIs
     func requestCollectionWith(query keywords: String!,
                                callBack handler: @escaping ([MVCollection]?)->Void)
     {
         let urlText = MVURLMaker.collectionQueryUrlWith( keywords)
-        let url = URL.init(string: urlText!)
         
-        let task = URLSession.shared.dataTask(with: url!) { (mData, response, error) in
+        self.jsonRequest(with: urlText) {(mData, response, error) in
             
             guard error == nil, mData != nil
                 else
@@ -121,11 +126,8 @@ class MVNetworkManager: NSObject {
                     return
                 }
             }
-            
             handler(nil)
         }
-        
-        task.resume()
     }
     
     func requestCollectionMoviesFor( movie aMovie: MVMovie!,
