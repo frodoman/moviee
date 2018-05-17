@@ -25,7 +25,7 @@ class MVMoviePresenter: NSObject {
     {
         self.targetView?.startWaiting()
         
-        MVNetworkManager.shared.requestNowPlayingMoviesWith { (movies) in
+        MVNetworkManager.shared.requestNowPlayingMovies { (movies) in
             DispatchQueue.main.sync(execute: {
                 self.targetView?.stopWaiting()
                 self.targetView?.showPlayingMovies!(movies)
@@ -36,7 +36,7 @@ class MVMoviePresenter: NSObject {
     func getMovieDetails(withId movieId: Int!)
     {
         self.targetView?.startWaiting()
-        MVNetworkManager.shared.requestMovieDetailsWith(movieId: movieId) { (aMovie) in
+        MVNetworkManager.shared.requestMovieDetails(with: movieId) { (aMovie) in
             DispatchQueue.main.async(execute: {
                 self.targetView?.stopWaiting()
                 self.targetView?.showMovieDetails!(aMovie)
@@ -47,7 +47,7 @@ class MVMoviePresenter: NSObject {
     func getCollectionMoviesFor(movie aMovie: MVMovie!)
     {
         self.targetView?.startWaiting()
-        MVNetworkManager.shared.requestCollectionMoviesFor(movie: aMovie) { (movies) in
+        MVNetworkManager.shared.requestCollectionMovies(forMovie: aMovie) { (movies) in
             DispatchQueue.main.sync(execute: {
                 self.targetView?.stopWaiting()
                 self.targetView?.showCollectionMovies!(movies)

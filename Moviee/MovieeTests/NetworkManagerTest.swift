@@ -32,4 +32,14 @@ class NetworkManagerTest: XCTestCase {
         }
     }
     
+    //TODO: Use Mock to test the netowrk API
+    func testMovieAPINowPlaying()
+    {
+        
+    }
+    
+    func testMovieAPIDetails()
+    {
+        
+    }
 }

@@ -32,7 +32,7 @@ class MVNetworkManager: NSObject {
     }
     
     //MARK: - Movies API
-    func requestNowPlayingMoviesWith(_ handler: @escaping MVMovieListCallBack ) -> Void
+    func requestNowPlayingMovies(with handler: @escaping MVMovieListCallBack ) -> Void
     {
         self.requestMovieListFrom(ConstUrlTextNowPlaying, callBack: handler)
     }
@@ -73,7 +73,7 @@ class MVNetworkManager: NSObject {
         }
     }
     
-    func requestMovieDetailsWith(movieId mId: Int!,
+    func requestMovieDetails(with mId: Int!,
                              callBack handler: @escaping (MVMovie?)->Void) ->Void
     {
          self.jsonRequest(with: MVURLMaker.movieDetailsUrlWith(String(mId!)))
@@ -98,7 +98,7 @@ class MVNetworkManager: NSObject {
     }
     
     //MARK: Collection APIs
-    func requestCollectionWith(query keywords: String!,
+    func requestCollection(withQuery keywords: String!,
                                callBack handler: @escaping ([MVCollection]?)->Void)
     {
         let urlText = MVURLMaker.collectionQueryUrlWith( keywords)
@@ -130,7 +130,7 @@ class MVNetworkManager: NSObject {
         }
     }
     
-    func requestCollectionMoviesFor( movie aMovie: MVMovie!,
+    func requestCollectionMovies( forMovie aMovie: MVMovie!,
                                     callBack handler: @escaping MVMovieListCallBack )
     {
         if let title = aMovie.title
@@ -141,7 +141,7 @@ class MVNetworkManager: NSObject {
                 keywords = title.components(separatedBy: ":").first!
             }
             
-            self.requestCollectionWith(query: keywords, callBack: { (collections) in
+            self.requestCollection(withQuery: keywords, callBack: { (collections) in
                 guard let cArray = collections,
                     cArray.count > 0
                 else

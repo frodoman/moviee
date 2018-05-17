@@ -15,7 +15,7 @@ extension UIView
     func showWaitingAnimation()
     {
         let maskView = UIView.init(frame: self.bounds)
-        maskView.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        maskView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
         maskView.tag = ConstViewTagMask
         maskView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
